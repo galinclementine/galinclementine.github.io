@@ -1,81 +1,37 @@
-import com.opencsv.bean.CsvBindByPosition;
+import com.opencsv.bean.CsvBindByName;
 
 public class Pojo {
-    @CsvBindByPosition(position = 0)
-    private String annee;
+    @CsvBindByName(column = "FANN_KEY")
+    private String fann_key;
 
-    @CsvBindByPosition(position = 1)
-    private String parcours;
+    @CsvBindByName(column = "FDIP_CODE")
+    private String fdip_code;
 
-    @CsvBindByPosition(position = 2)
-    private String semestre;
+    @CsvBindByName(column = "FGRA_CODE")
+    private String fgra_code;
 
-    @CsvBindByPosition(position = 3)
-    private String ue;
+    @CsvBindByName(column = "FHAB_NIVEAU")
+    private String fhab_niveau;
 
-    @CsvBindByPosition(position = 4)
-    private String ec;
+    @CsvBindByName(column = "MPAR_CODE")
+    private String mpar_code;
 
-    @CsvBindByPosition(position = 5)
-    private String ap;
+    @CsvBindByName(column = "FORMATION")
+    private String formation;
 
-    public String getAnnee() {
-        return annee;
-    }
-
-    public void setAnnee(String annee) {
-        this.annee = annee;
-    }
-
-    public String getParcours() {
-        return parcours;
-    }
-
-    public void setParcours(String parcours) {
-        this.parcours = parcours;
-    }
-
-    public String getSemestre() {
-        return semestre;
-    }
-
-    public void setSemestre(String semestre) {
-        this.semestre = semestre;
-    }
-
-    public String getUe() {
-        return ue;
-    }
-
-    public void setUe(String ue) {
-        this.ue = ue;
-    }
-
-    public String getEc() {
-        return ec;
-    }
-
-    public void setEc(String ec) {
-        this.ec = ec;
-    }
-
-    public String getAp() {
-        return ap;
-    }
-
-    public void setAp(String ap) {
-        this.ap = ap;
-    }
+    @CsvBindByName(column = "MOY_HEURES_PRESENTIEL")
+    private String moy_heures_presentiel;
 
     @Override
     public String toString() {
         return "Pojo{" +
-                "annee='" + annee + '\'' +
-                ", parcours='" + parcours + '\'' +
-                ", semestre='" + semestre + '\'' +
-                ", ue='" + ue + '\'' +
-                ", ec='" + ec + '\'' +
-                ", ap='" + ap + '\'' +
+                "fann_key='" + fann_key + '\'' +
+                ", fdip_code='" + fdip_code + '\'' +
+                ", fgra_code='" + fgra_code + '\'' +
+                ", fhab_niveau='" + fhab_niveau + '\'' +
+                ", mpar_code='" + mpar_code + '\'' +
+                ", formation='" + formation + '\'' +
+                ", moy_heures_presentiel='" + moy_heures_presentiel + '\'' +
                 '}';
     }
 }
